@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+
+import {Component, Input} from '@angular/core';
+import {NgbActiveModal, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { FormsComponent } from './forms/forms.component';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'frontdesc';
+  constructor(private modalService: NgbModal) {}
+
+  open() {
+    const modalRef = this.modalService.open(FormsComponent,{ size: 'lg' });
+  }
 }

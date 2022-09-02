@@ -1,0 +1,86 @@
+
+<div class="card">
+    <div class="card-header text-center">
+      <p><ngb-progressbar  type="danger" [value]="count" [max]="totalControls" height=".5rem"></ngb-progressbar></p>
+      <h3 style="color:red">Let's get started!</h3>
+      <p style="color: #8A8A8A;;">Add  your details ( As per your registered records)</p>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="form" class="row g-3">
+          <div  *ngIf="!screen">
+            <div class="col-md-11">
+              <label for="inputName" class="form-label">Name</label>
+              <input type="text" class="form-control" placeholder="Enter Name" formControlName="inputName"  id="inputName">
+            </div>
+            <div class="col-12 mt-3">
+              <label for="inputAddress" class="form-label">Nature of driving licence</label>
+             <div class="row">
+              <div class="form-check col-5">
+                <input class="form-check-input" type="radio" value="private" formControlName="radio1" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Private
+                </label>
+              </div>
+              <div class="form-check col-5">
+                <input class="form-check-input" type="radio" value="commercial" formControlName="radio1"  id="flexRadioDefault2" >
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Commerical
+                </label>
+              </div>
+            </div>
+            </div>
+            <div class="col-12 mt-3">
+                <label for="inputAddress" class="form-label">Type of Previous driving licence</label>
+               <div class="row">
+                <div class="form-check col-5">
+                  <input class="form-check-input" type="radio" value="PDL" formControlName="radio2" id="flexRadioDefault3">
+                  <label class="form-check-label" for="flexRadioDefault4">
+                   Paper Driving Licence
+                  </label>
+                </div>
+                <div class="form-check col-5">
+                  <input class="form-check-input" type="radio" value="SDL" formControlName="radio2" id="flexRadioDefault4" >
+                  <label class="form-check-label" for="flexRadioDefault4">
+                   Smart Driving Licence
+                  </label>
+                </div>
+              </div>
+              </div>
+            </div>
+              <div  *ngIf="screen" [@slideInOut]>
+              <div class="col-md-11">
+                <label for="inputplace" class="form-label">Place where Driving License was Issued</label>
+                <input type="text" class="form-control" placeholder="Enter Place Name" formControlName="inputplace" id="inputplace">
+              </div>
+              <div class="col-md-11 mt-3">
+                <label for="inputState" class="form-label">Issued Year of Licence</label>
+                <select id="inputState" class="form-select" formControlName="issuedYear">
+                  <option selected value="">Choose Issued Year of Licence</option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                </select>
+              </div>
+              <div class="col-md-11 mt-3">
+                <label for="inputState" class="form-label">Type of previous Driving Licence</label>
+                <select id="inputState" class="form-select" formControlName="previousDL">
+                  <option selected value="">Choose Expired year of License</option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                </select>
+              </div>
+            </div>
+          </form>
+    </div>
+    <div class="card-footer text-center">
+     <button (click)="activateModal.dismissAll()"> < Back</button>
+    </div>
+  </div>
+
+
+          

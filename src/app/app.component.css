@@ -1,0 +1,57 @@
+button {
+    background-color: red;
+    outline: none;
+    color: white;
+    border-radius: 20px;
+    height: 55px;
+    width: 400px;
+}
+
+
+button.myclass{
+    width: 200px;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 24px rgb(70 70 70 / 25%);
+    border-radius: 20px;
+    height: 55px;
+    color: black;
+    border: none;
+}
+
+.dropdownMenu{
+    position: relative;
+    width: 100%;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+   
+} 
+.dropdownMenu h2 {
+    display: block;
+    color: #8A8A8A;
+    font-size: 16px;
+    padding-left: 10px;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+.list-unstyled{
+    padding-left: 0;
+    list-style: none;
+}
+ul li {
+    background: #F3F3F3;
+    border-radius: 10px;
+    margin: 10px 13px 0px 0px;
+    padding: 11px 0px;
+    text-align: center;
+    color: #0d0d0d;
+    font-weight: 700;
+    font-size: 14px;
+    width: 96%;
+    cursor: pointer;
+}
+
+ul li:hover{
+    background: #FA3737;
+    color: white;
+}
